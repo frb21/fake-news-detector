@@ -165,7 +165,7 @@ def predict_fake_news(news, model, vectorizer):
     vectorized_news = vectorizer.transform([cleaned_news])
     prediction = model.predict(vectorized_news)
     
-    result = "Fake News" if prediction[0] == 1 else "Real News"
+    result = "Fake News" if prediction[0] == 'FAKE' else "Real News"
     
     return result, cleaned_news
 
